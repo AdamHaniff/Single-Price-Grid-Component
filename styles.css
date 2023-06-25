@@ -1,0 +1,236 @@
+:root {
+  /********** STYLE GUIDE *********/
+
+  /************ COLORS ************/
+  --cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --macawBlueGreen: hsl(184, 54%, 52%);
+
+  /********** FONT FAMILY *********/
+  --karla: "Karla", sans-serif;
+
+  /********* FONT WEIGHTS *********/
+  --fw400: 400;
+  --fw700: 700;
+}
+
+/************* GENERAL ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--lightGray);
+  font-family: var(--karla);
+  font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/****** PRICE GRID COMPONENT ******/
+.price-grid-component {
+  margin: 7.2rem 3.2rem 6.2rem;
+  max-width: 37.5rem;
+}
+
+/******* COMMUNITY CONTAINER ******/
+.community-container {
+  background: var(--white);
+  box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 2.8rem 2.4rem 3.2rem;
+}
+
+.community-header {
+  font-weight: var(--fw700);
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.25px;
+  color: var(--cyan);
+  margin-bottom: 2.4rem;
+}
+
+.money-back-text {
+  font-weight: var(--fw700);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.1875px;
+  color: var(--brightYellow);
+  margin-bottom: 1.6rem;
+}
+
+.access-to-text {
+  font-weight: var(--fw400);
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.175px;
+  color: var(--grayishBlue);
+}
+
+/* MONTHLY SUBSCRIPTION CONTAINER */
+.monthly-subscription-container {
+  background: var(--cyan);
+  padding: 2.4rem;
+}
+
+.monthly-subscription-text {
+  font-weight: var(--fw700);
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.225px;
+  color: var(--white);
+  margin-bottom: 1.8rem;
+}
+
+.pricing-per-month-container {
+  display: flex;
+  gap: 1.1rem;
+  margin-bottom: 0.4rem;
+  align-items: center;
+}
+
+.pricing-text {
+  font-weight: var(--fw700);
+  font-size: 3.2rem;
+  line-height: 3.7rem;
+  letter-spacing: -0.4px;
+  color: var(--white);
+}
+
+.per-month-text {
+  font-weight: var(--fw400);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.2px;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.full-access-text {
+  font-weight: var(--fw400);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.2px;
+  color: var(--white);
+  margin-bottom: 2.6rem;
+}
+
+.sign-up-btn {
+  background: var(--brightYellow);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+  border-radius: 0.5rem;
+  font-weight: var(--fw700);
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.2px;
+  color: var(--white);
+  border: none;
+  padding: 4% 27.2%;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+/******** WHY US CONTAINER ********/
+.why-us-container {
+  background: var(--macawBlueGreen);
+  padding: 2.4rem;
+}
+
+.why-us-text {
+  font-weight: var(--fw700);
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.225px;
+  color: var(--white);
+  margin-bottom: 1.8rem;
+}
+
+.feature-text {
+  font-weight: var(--fw400);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: -0.175px;
+  color: var(--white);
+  opacity: 0.75;
+}
+
+/******** BUTTON HOVER STATE ********/
+.sign-up-btn:is(:hover, :focus) {
+  cursor: pointer;
+  background: var(--white);
+  color: var(--brightYellow);
+}
+
+/******* 1440px MEDIA QUERY *******/
+@media (min-width: 90em) {
+  /************* GENERAL ************/
+  html,
+  body,
+  main {
+    height: 100%;
+  }
+
+  /***** PRICE GRID COMPONENT *****/
+  .price-grid-component {
+    margin: initial;
+    max-width: 63.5rem;
+    max-height: 47.5rem;
+    display: grid;
+    grid-template-columns: 31.7rem 31.8rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+
+  /****** COMMUNITY CONTAINER *****/
+  .community-container {
+    padding: 4rem;
+    grid-column: 1 / 3;
+  }
+
+  .community-header {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.3px;
+  }
+
+  .money-back-text {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    letter-spacing: -0.225px;
+    margin-bottom: 1.1rem;
+  }
+
+  .access-to-text {
+    font-size: 1.6rem;
+    letter-spacing: -0.2px;
+  }
+
+  /* MONTHLY SUBSCRIPTION CONTAINER */
+  .monthly-subscription-container {
+    padding: 4rem;
+    grid-column: 1 / 2;
+  }
+
+  .sign-up-btn {
+    padding: 4.7% 28%;
+    height: 4.8rem;
+  }
+
+  /******** WHY US CONTAINER ********/
+  .why-us-container {
+    padding: 4rem;
+    grid-column: 2 / 3;
+  }
+}
